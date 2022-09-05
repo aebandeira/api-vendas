@@ -3,7 +3,7 @@ import { EntityRepository, Repository } from 'typeorm';
 import Order from '../entities/Order';
 
 interface IProduct {
-  prodduct_id: string;
+  product_id: string;
   price: number;
   quantity: number;
 }
