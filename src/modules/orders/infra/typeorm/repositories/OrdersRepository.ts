@@ -17,10 +17,7 @@ class OrdersRepository implements IOrdersRepository {
     return order;
   }
 
-  public async create({
-    customer,
-    products,
-  }: ICreateOrder): Promise<Order | undefined> {
+  public async create({ customer, products }: ICreateOrder): Promise<Order> {
     const order = this.ormRepository.create({
       customer,
       order_products: products,
@@ -31,3 +28,5 @@ class OrdersRepository implements IOrdersRepository {
     return order;
   }
 }
+
+export default OrdersRepository;
