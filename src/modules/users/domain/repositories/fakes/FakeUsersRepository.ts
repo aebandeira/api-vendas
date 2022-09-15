@@ -27,7 +27,9 @@ class FakeUsersRepository implements IUsersRepository {
     return user;
   }
 
-  public async remove(user: User): Promise<void> {}
+  public async remove(user: User): Promise<void> {
+    return;
+  }
 
   public async findAll(): Promise<User[]> {
     return this.users;
